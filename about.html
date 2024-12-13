@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiFlow - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --dark-blue: #001A6E;
+            --primary-blue: #074799;
+            --teal: #009990;
+            --light-green: #E1FFBB;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .navbar-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-links a:hover {
+            color: var(--teal);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 5%;
+        }
+
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Mission Statement */
+        .mission {
+            background-color: var(--white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .mission h2 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--dark-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Core Features */
+        .features {
+            background-color: var(--light-green);
+            padding: 4rem 5%;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-card i {
+            color: var(--primary-blue);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-family: 'Oswald', sans-serif;
+            margin-bottom: 1rem;
+            color: var(--dark-blue);
+        }
+
+        /* Team Section */
+        .team {
+            background-color: var(--white);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .team h2 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--dark-blue);
+            margin-bottom: 2rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background-color: var(--light-green);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .team-member h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--dark-blue);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--teal);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar-links {
+                margin-top: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">LogiFlow</a>
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Revolutionizing Logistics Management</h1>
+        <p>At LogiFlow, we're transforming the way businesses handle logistics through cutting-edge technology and innovative solutions that streamline operations and drive efficiency.</p>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>To empower businesses with intelligent logistics solutions that optimize supply chain performance, reduce costs, and create sustainable growth through advanced technology and strategic insights.</p>
+    </section>
+
+    <!-- Core Features -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Real-Time Tracking</h3>
+                <p>Advanced GPS and IoT technologies providing instant visibility into your shipments.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Logistics</h3>
+                <p>Robust security protocols ensuring the safety and integrity of your goods.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-globe"></i>
+                <h3>Global Network</h3>
+                <p>Extensive international partnerships enabling seamless global logistics.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-robot"></i>
+                <h3>AI-Powered Optimization</h3>
+                <p>Machine learning algorithms that continuously improve routing and efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="D:\Web Development\Smart LogiX\samarth .jpg" alt="Team Member">
+                <h3>Samarth D</h3>
+                <p>CEO</p>
+                <p>Tech innovator with 15 years of logistics experience.</p>
+            </div>
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Team Member">
+                <h3>Veeresh T</h3>
+                <p>Software developer</p>
+                <p>Expert in AI and supply chain technologies.</p>
+            </div>
+            <div class="team-member">
+                <img src="/api/placeholder/200/200" alt="Team Member">
+                <h3>Sreyas K</h3>
+                <p>CTO</p>
+                <p>Global logistics strategist with international experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p>&copy; 2024 LogiFlow. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
